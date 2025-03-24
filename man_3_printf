@@ -1,0 +1,58 @@
+% _PRINTF(3) Manuels du programmeur Linux
+
+# NOM
+
+_printf - fonction personnalisée qui produit une sortie formatée vers la sortie standard (stdout)
+
+# SYNOPSIS
+
+```c
+#include "main.h"
+
+int _printf(const char *format, ...);
+
+DESCRIPTION
+
+La fonction _printf() écrit une sortie formatée sur la sortie standard (stdout). Elle fonctionne de manière similaire à la fonction standard printf du langage C, mais de façon simplifiée.
+Elle accepte une chaîne de format contenant du texte et des directives de conversion, qui sont remplacées par les valeurs des arguments fournis.
+
+Caractéristiques :
+    •    Écrit uniquement sur la sortie standard.
+    •    Retourne le nombre de caractères imprimés, hors caractère nul (\0).
+    •    Ne gère pas :
+    •    les flags (+, -, 0, etc.),
+    •    la largeur de champ (field width),
+    •    la précision,
+    •    les modificateurs de longueur (l, h, etc.),
+    •    les tampons (buffer) comme printf.
+
+Spécificateurs de conversion pris en charge :
+
+Spécificateur    Description
+%c    Affiche un caractère
+%s    Affiche une chaîne de caractères
+%%    Affiche le caractère %
+%d, %i    Affiche un entier (positif ou négatif)
+
+Exemple :
+
+_printf("Bonjour %s ! Vous avez %d messages.\n", "Alice", 3);
+
+Affichera :
+
+Bonjour Alice ! Vous avez 3 messages.
+
+VALEUR DE RETOUR
+
+La fonction retourne le nombre total de caractères affichés.
+En cas d’erreur (par exemple si format est NULL), la fonction retourne -1.
+
+AUTEURS
+
+Projet écrit dans le cadre d’une formation en programmation C (Holberton School / 42 / équivalent), par [Vos Noms].
+
+VOIR AUSSI
+
+printf(3), putchar(3), write(2)
+
+---
