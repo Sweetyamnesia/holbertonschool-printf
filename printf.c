@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
 			int caractere = va_arg(args, int);
-			putchar(caractere);
+			_putchar(caractere);
 			count++;
 			i++;
 		}
@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			char *string = va_arg(args, char *);
 			for (j = 0; string[j] != '\0'; j++)
 			{
-				putchar(string[j]);
+				_putchar(string[j]);
 				count++;
 			}
 			i++;
@@ -40,13 +40,13 @@ int _printf(const char *format, ...)
 
 		else if (format[i] =='%' && format[i + 1] == '%')
 		{
-			putchar('%');
+			_putchar('%');
 			count++;
 			i++;
 		}
 		else
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 			count++;
 		}
 
