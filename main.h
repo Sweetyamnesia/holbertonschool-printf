@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
+#include <unistd.h>
 
 /**
  * struct format_spec - structure qui définit les différents formats.
