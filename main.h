@@ -27,6 +27,4 @@ int print_number(int n);
 
 format_spec_t *get_formats(void);
 
-
-
 #endif
