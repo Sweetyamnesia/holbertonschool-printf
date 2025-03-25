@@ -15,5 +15,8 @@ typedef struct display
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int print_char(va_list display);
+int print_string(va_list display)
+
 
 #endif

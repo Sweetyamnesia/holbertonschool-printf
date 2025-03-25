@@ -43,3 +43,16 @@ int print_string(va_list display)
 	}
 	return (count);
 }
+
+/**
+ * print_percent - Afficher un pourcentage
+ * @display: Liste des arguments
+ */
+
+ int print_percent(va_list display)
+ {
+	(void) display;
+	_putchar('%');
+
+	return (1);
+ }
