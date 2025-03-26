@@ -85,12 +85,13 @@ int print_recursion(int n)
  */
 
 int print_int(va_list list)
- {
+{
 	int n = va_arg(list, int);
 	int count = 0;
 
 	if (n == INT_MIN)
 	{
+
 		_putchar('-');
 		count++;
 		count += print_recursion(214748364);
@@ -106,6 +107,5 @@ int print_int(va_list list)
 		count ++;
 	}
 	count += print_recursion(n);
-	return(count);
-
- }
+	return (count);
+}
