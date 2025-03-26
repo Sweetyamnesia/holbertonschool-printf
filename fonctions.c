@@ -92,6 +92,7 @@ int print_int(va_list list)
 		_putchar('-');
 		n = -n;
 		count ++;
+		
 	}
 	count += print_recursion(n);
 	return(count);
