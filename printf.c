@@ -31,12 +31,13 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-			if (!similar)
-			{
-				_putchar('%');
-				_putchar(format[i]);
-				count += 2;
-			}
+		}
+
+		if (!similar)
+		{
+			_putchar('%');
+			_putchar(format[i]);
+			count += 2;
 		}
 		else
 		{
