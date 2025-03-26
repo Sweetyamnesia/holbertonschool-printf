@@ -1,58 +1,54 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
- * print_char - Affiche un caractere
- * @display: Liste des arguments
+ * print_char - Affiche un caractère
+ * @list: Liste des arguments
  *
- * Return: Nombre de caracteres imprimes (1)
+ * Return: Nombre de caractères imprimés (1)
  */
 
-int print_char(va_list display)
+int print_char(va_list list)
 {
-	int i;
+	char c = va_arg(list, int);
 
-	i = va_arg(display, int);
-
-	_putchar(i);
-
-	return(1);
+	_putchar(c);
+	return (1);
 }
 
 /**
- * print_string - Affiche une chaine de caracteres
- * @display: Liste des arguments
+ * print_string - Affiche une chaîne de caractères
+ * @list: Liste des arguments
  *
- * Return: Nombre de caracteres imprimes
+ * Return: Nombre de caractères imprimés
  */
 
-int print_string(va_list display)
+int print_string(va_list list)
 {
-	char *string;
-	int count;
+	char *str = va_arg(list, char *);
+	int count = 0;
 
-	string = va_arg(display, char *);
+	if (str == NULL)
+		str = "(null)";
 
-	if (string == NULL)
+	while (str[count])
 	{
-		string = "(null)";
-	}
-
-	for (count = 0; string[count] != '\0'; count++)
-	{
-		_putchar(string[count]);
+		_putchar(str[count]);
+		count++;
 	}
 	return (count);
 }
 
 /**
- * print_percent - Afficher un pourcentage
- * @display: Liste des arguments
+ * print_percent - Fonction pour imprimer le %.
+ * @list: liste des arguments.
+ * Return: Nombre de caractères imprimés
  */
 
- int print_percent(va_list display)
- {
-	(void) display;
+int print_percent(va_list list)
+{
+	(void) list;
 	_putchar('%');
 
 	return (1);
- }
+}
