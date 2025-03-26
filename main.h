@@ -5,19 +5,23 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stddef.h>
+#include <unistd.h>
 
-typedef struct display
+/**
+ * struct format_spec - Structure qui définit les différents formats.
+ * @specifier: le caractère représentant le format (%c, %s, %d, etc.).
+ * @function: pointeur vers la fonction qui gère ce format.
+ */
+typedef struct format_spec
 {
-    char *spec;
-    int (*display)(va_list lst);
-} function;
-
+	char specifier;
+	int (*function)(va_list list);
+} format_spec_t;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_char(va_list display);
-int print_string(va_list display);
-int print_percent(va_list display);
-
+int print_char(va_list list);
+int print_string(va_list list);
+int print_int(va_list list);
 
 #endif
