@@ -14,6 +14,19 @@ Dans ce projet, nous avons implémenté notre propre version nommée _printf, ca
 - %d : afficher un **nombre décimal**
 - %i : affiche un **entier**
 
+## COMMANDE DE COMPILATION
+Vous pouvez compiler le code de cette manière : 
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+
+## REQUIREMENTS
+
+## EXEMPLES
+
+## TESTING
+
+## FLOWCHART 
+
+
 ## COLLABORATEURS & AUTEURS
 
 [**Victoire Boutin**](https://github.com/Victoire07)

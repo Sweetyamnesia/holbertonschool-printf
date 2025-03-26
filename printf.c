@@ -8,51 +8,40 @@
 
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int i;
-	int j;
-	int count = 0;
+	va_list list;
+	int i = 0, j = 0, count = 0;
 
-	
-	va_start(args, format);
-	for (i = 0; format[i] !='\0'; i++)
+	format_spec_t spec_array[] = {
+	{'c', print_char}, {'s', print_string}, {'d', print_int},
+	{'i', print_int}, {'\0', NULL}
+	};
+
+	va_start(list, format);
+	while (format && format[i])
 	{
-
-		
-		if (format[i] == '%' && format[i + 1] == 'c')
+		if (format[i] == '%')
 		{
-			int caractere = va_arg(args, int);
-			_putchar(caractere);
-			count++;
 			i++;
-		}
 
-		else if (format[i] == '%' && format[i + 1] == 's')
-		{
-			char *string = va_arg(args, char *);
-			for (j = 0; string[j] != '\0'; j++)
+			for (j = 0; spec_array[j].specifier != '\0'; j++)
 			{
-				_putchar(string[j]);
-				count++;
+				if (format[i] == spec_array[j].specifier)
+				{
+					count += spec_array[j].function(list);
+					break;
+				}
 			}
-			i++;
-		}
-
-		else if (format[i] =='%' && format[i + 1] == '%')
-		{
-			_putchar('%');
-			count++;
-			i++;
 		}
 		else
 		{
 			_putchar(format[i]);
 			count++;
 		}
-
+		i++;
 	}
 
-	va_end(args);
-	return count;
+
+	va_end(list);
+	return (count);
 
 }
