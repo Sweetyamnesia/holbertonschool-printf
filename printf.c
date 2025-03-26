@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i = 0, j = 0, count = 0;
+	int i = 0, j = 0, count = 0, similar = 0;
 
 	format_spec_t spec_array[] = {
 	{'c', print_char}, {'s', print_string}, {'d', print_int},
@@ -30,6 +30,12 @@ int _printf(const char *format, ...)
 					count += spec_array[j].function(list);
 					break;
 				}
+			}
+			if (!similar)
+			{
+				_putchar('%');
+				_putchar(format[i]);
+				count += 2;
 			}
 		}
 		else
