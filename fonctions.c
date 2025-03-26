@@ -4,6 +4,7 @@
 /**
  * print_char - Affiche un caractère
  * @list: Liste des arguments (va_list)
+ * @list: Liste des arguments
  *
  * Return: Nombre de caractères imprimés (1)
  */
@@ -42,6 +43,8 @@ int print_string(va_list list)
 /**
  * print_percent - Fonction pour imprimer le %.
  * @list: liste des arguments (va_list) non utilisé ici
+ * print_int - Affiche un entier
+ * @list: Liste des arguments
  *
  * Return: Nombre de caractères imprimés
  **/
