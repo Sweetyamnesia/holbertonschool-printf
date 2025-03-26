@@ -1,10 +1,11 @@
 #include "main.h"
 #include <unistd.h>
+#include <limits.h>
+
 
 /**
  * print_char - Affiche un caractère
  * @list: Liste des arguments (va_list)
- * @list: Liste des arguments
  *
  * Return: Nombre de caractères imprimés (1)
  */
@@ -88,12 +89,21 @@ int print_int(va_list list)
 	int n = va_arg(list, int);
 	int count = 0;
 
+	if (n == INT_MIN)
+	{
+		_putchar('-');
+		count++;
+		count += print_recursion(214748364);
+		_putchar('8');
+		count++;
+		return(count);
+	}
+
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 		count ++;
-		
 	}
 	count += print_recursion(n);
 	return(count);
