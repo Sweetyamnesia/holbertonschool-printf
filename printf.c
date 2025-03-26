@@ -28,6 +28,7 @@ int _printf(const char *format, ...)
 				if (format[i] == spec_array[j].specifier)
 				{
 					count += spec_array[j].function(list);
+					similar = 1;
 					break;
 				}
 			}
