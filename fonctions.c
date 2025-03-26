@@ -42,23 +42,6 @@ int print_string(va_list list)
 
 /**
  * print_percent - Fonction pour imprimer le %.
- * @list: liste des arguments (va_list) non utilisé ici
- * print_int - Affiche un entier
- * @list: Liste des arguments
- *
- * Return: Nombre de caractères imprimés
- **/
-
-int print_int(va_list list)
-{
-	int n = va_arg(list, int);
-
-	return ((n));
-}
-
-
-/**
- * print_percent - Fonction pour imprimer le %.
  * @list: liste des arguments.
  * Return: Nombre de caractères imprimés
  */
