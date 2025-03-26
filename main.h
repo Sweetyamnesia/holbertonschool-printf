@@ -24,5 +24,7 @@ int print_char(va_list list);
 int print_string(va_list list);
 int print_int(va_list list);
 int print_percent(va_list list);
+int print_recursion(int n);
+int print_int(va_list list);
 
 #endif

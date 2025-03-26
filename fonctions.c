@@ -76,8 +76,6 @@ int print_recursion(int n)
 	}
 }
 
-
-
 /**
  * print_int - Fonction pour imprimer 1 entier signe dc %d ou %i
  * @list: liste des arguments (va_list)
