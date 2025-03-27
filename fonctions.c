@@ -33,7 +33,7 @@ int print_string(va_list list)
 	if (str == NULL)
 		str = "(null)";
 
-		while (str[count] != '\0')  // Version explicite
+		while (str[count] != '\0')
 
 	{
 		_putchar(str[count]);
