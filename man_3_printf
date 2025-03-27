@@ -1,13 +1,13 @@
-.TH PRINTF 1 "Mars 2025" "Man page PRINTF" "Section 1"
+.TH PRINTF 1 "Mars 2025" "Documentation personnalisée" "General Commands Manual"
 
 .SH NAME
 printf - fonction personnalisée qui produit une sortie formatée vers la sortie standard (stdout)
 
 .SH SYNOPSIS
-.EX
+.nf
 #include <stdio.h>
 int printf(const char *restrict format, ...);
-.EE
+.fi
 
 .SH DESCRIPTION
 La fonction \fBprintf()\fR écrit une sortie formatée sur la sortie standard (stdout). Elle fonctionne de manière similaire à la fonction standard \fBprintf()\fR du langage C, mais de façon simplifiée.
@@ -39,15 +39,15 @@ Affiche le caractère `%`.
 Affiche un entier (positif ou négatif).
 
 .SH EXEMPLE
-.EX
+.nf
 _printf("Bonjour %s ! Vous avez %d messages.\n", "Alice", 3);
-.EE
+.fi
 
 Affichera :
 
-.EX
+.nf
 Bonjour Alice ! Vous avez 3 messages.
-.EE
+.fi
 
 .SH "VALEUR RENVOYÉE"
 La fonction retourne le nombre total de caractères affichés.  
