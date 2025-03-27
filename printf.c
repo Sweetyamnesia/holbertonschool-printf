@@ -40,6 +40,13 @@ int _printf(const char *format, ...)
                     count += spec_array[j].function(list);
                     break;
                 }
+
+                if (spec_array[j].specifier == '\0')
+                {
+                    _putchar('%');
+                    _putchar(format[i]);
+                    count += 2;
+                }
             }
         }
         else
