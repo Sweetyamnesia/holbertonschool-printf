@@ -19,12 +19,6 @@
     if (format == NULL)
         return (-1);
 
-    if (format == "%" && *(format + 1) == '\0')
-    {
-        return (-1);
-    }
-    
-
     va_start(list, format);
     while (format && format[i])
     {
