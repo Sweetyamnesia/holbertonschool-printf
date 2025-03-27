@@ -23,7 +23,7 @@
         return(-1);
  
     va_start(list, format);
-    while (format != NULL && format[i] != NULL)
+    while (format != NULL && format[i] != '\0')
     {
 
         if (format[i] == '%')
