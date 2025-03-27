@@ -67,9 +67,9 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o _printf
 
 ## 🗂️ FICHIERS IMPORTANTS
 
-- `main.h` : Fichier d’en-tête contenant les prototypes
+- `main.h` : Fichier d’en-tête contenant les prototypes. C'est le point central du projet. Ce fichier permet de déclarer toutes les fonctions et structures dont on aura besoin dans les autres fichiers .c
 - `_printf.c` : Fonction principale
-- `fonctions.c` : Fichier contenant toutes les fonctions spécialisées qui sont responsable d'afficherun type d'argument particulier dans la fonction print.f
+- `fonctions.c` : Fichier contenant toutes les fonctions spécialisées qui sont responsables d'afficherun type d'argument particulier dans la fonction print.f
 
 ---
 
