@@ -19,7 +19,7 @@
     if (format == NULL)
         return (-1);
 
-    if (*(format + 1) == 0)
+    if (*format == "%" && *(format + 1) == '\0')
     {
         return (-1);
     }
