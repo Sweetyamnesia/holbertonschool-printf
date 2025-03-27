@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 
     format_spec_t spec_array[] = {
     {'c', print_char}, {'s', print_string}, {'d', print_int},
-    {'i', print_int}, {'\0', NULL}
+    {'i', print_int}, {'%', print_percent}, {'\0', NULL}
     };
 
     va_start(list, format);
@@ -23,14 +23,6 @@ int _printf(const char *format, ...)
         if (format[i] == '%')
         {
             i++;
-            if (format[i] == '%')
-            {
-                _putchar('%');
-                count++;
-                i++;
-                continue;
-            }
-
 
             for (j = 0; spec_array[j].specifier != '\0'; j++)
             {
