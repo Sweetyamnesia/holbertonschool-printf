@@ -16,6 +16,10 @@ int _printf(const char *format, ...)
     {'i', print_int}, {'%', print_percent}, {'\0', NULL}
     };
 
+    if (format == NULL)
+
+    return(-1);
+
     va_start(list, format);
     while (format && format[i])
     {
