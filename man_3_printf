@@ -1,23 +1,23 @@
-# MAN PAGE
+.TH MAN PAGE
 
-**1. Nom**
+.B 1. Nom
 printf - fonction personnalisée qui produit une sortie formatée vers la sortie standard (stdout)
 
-**Librairie**
+.B Librairie
 Librairie standard C.
 
-**2. Synopsis**
+.B 2. Synopsis
 ```c
 #include <stdio.h>
 
 int printf(const char *restrict format, ...);
 
-**3. Description**
+.B 3. Description
 La fonction _printf() écrit une sortie formatée sur la sortie standard (stdout). Elle fonctionne de manière similaire à la fonction standard printf du langage C, mais de façon simplifiée.
 Elle accepte une chaîne de format contenant du texte et des directives de conversion, qui sont remplacées par les valeurs des arguments fournis. Le prototype de la fonction printf est **int printf(const char * format, ...)** où ... signifie que 
 c''est une fonction variadique, qui peut prendre un nombre variables de paramètres.
 
-**Caractéristiques :**
+.B Caractéristiques :
 •Écrit uniquement sur la sortie standard.
 •Retourne le nombre de caractères imprimés, hors caractère nul (\0).
 •Ne gère pas :
@@ -27,15 +27,15 @@ c''est une fonction variadique, qui peut prendre un nombre variables de paramèt
 •les modificateurs de longueur (l, h, etc.),
 •les tampons (buffer) comme printf.
 
-**Spécificateurs de conversion pris en charge :**
+.B Spécificateurs de conversion pris en charge :
 
-Spécificateur	Description
+.B Spécificateur	Description
 %c				Affiche un caractère
 %s				Affiche une chaîne de caractères
 %%				Affiche le caractère %
 %d, %i			Affiche un entier (positif ou négatif)
 
-**Exemple :**
+.B Exemple :
 
 _printf(''Bonjour %s ! Vous avez %d messages.\n'', ''Alice'', 3);
 
@@ -43,26 +43,26 @@ Affichera :
 
 Bonjour Alice ! Vous avez 3 messages.
 
-**3.1 Valeur renvoyée**
+.B 3.1 Valeur renvoyée
 La fonction retourne le nombre total de caractères affichés.
 En cas d’erreur (par exemple si format est NULL), la fonction retourne -1.
 
-**3.2 Chaîne de format**
+.B 3.2 Chaîne de format
 La chaîne de format en printf est une chaîne normale contenant un nombre quelconque de conversions de format, 
 chacune commençant par le caractère % qui décrit comment formater l''argument correspondant.
 
-**c**
+.B c
 L''argument char, short ou int est affiché en tant que caractère ASCII.
 
-**s**
+.B s
 L''argument doit être un tableau de char ou une string. Les octets de ce tableau ou de la string sont lus jusqu''à un caractère nul de fin ou jusqu''à la fin des données, puis interprétés et affichés en tant que caractères ASCII. Si la précision n''est pas spécifiée, elle prend une valeur infinie, 
 donc tous les caractères jusqu''au premier caractère nul sont affichés. Dans le cas contraire, seule la partie du tableau de caractères affichée dans le nombre correspondant de colonnes à l''écran s''affiche.
 
-**%**
+.B %
 Permet d''afficher un caractère % littéral. Aucun argument n''est converti. La spécification de conversion complète doit être %%.
 
-**d**
+.B d
 L''argument char, short, int, long ou long long est affiché en tant que nombre entier décimal (base 10). Si l''argument est signed, il sera affiché en tant que valeur signée. Si l''argument est unsigned, il sera affiché en tant que valeur non signée. Cette conversion a la même signification que i.
 
-**i**
+.B i
 L''argument char, short, int, long ou long long est affiché en tant que nombre entier décimal (base 10). Si l''argument est signed, il sera affiché en tant que valeur signée. Si l''argument est unsigned, il sera affiché en tant que valeur non signée. Cette conversion a la même signification que d.
