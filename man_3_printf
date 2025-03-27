@@ -6,7 +6,7 @@ printf - fonction personnalisée qui produit une sortie formatée vers la sortie
 .SH SYNOPSIS
 .nf
 #include <stdio.h>
-int printf(const char *restrict format, ...);
+int printf(const char * format, ...);
 .fi
 
 .SH DESCRIPTION
@@ -52,3 +52,7 @@ Bonjour Alice ! Vous avez 3 messages.
 .SH "VALEUR RENVOYÉE"
 La fonction retourne le nombre total de caractères affichés.  
 En cas d’erreur (par exemple si `format` est NULL), la fonction retourne -1.
+
+SH "AUTEURS"
+Ce programme et cette documentation ont été réalisés par \fBAngela Rhin\fR et \fBVictoire Boutin\fR.  
+Projet réalisé au sein de l'école Holberton School à Bordeaux.  
