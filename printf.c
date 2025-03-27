@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
     va_start(list, format);
     while (format && format[i])
     {
-        
+
         if (format[i] == '%')
         {
             i++;
@@ -40,7 +40,6 @@ int _printf(const char *format, ...)
         }
         i++;
     }
-
 
     va_end(list);
     return (count);
