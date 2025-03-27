@@ -12,7 +12,7 @@ En C, la fonction printf() permet d'afficher une sortie formatée sur la sortie 
 
 Dans ce projet, nous avons implémenté notre propre version nommée _printf, capable de gérer les formats de base suivants :
 
-| SPÉCIFICATEUR | DESCRIPTION                        |
+| SPÉCIFICATEUR | DESCRIPTION                          |
 |---------------|--------------------------------------|
 | `%c`          | Affiche un caractère                 |
 | `%s`          | Affiche une chaîne de caractères     |
