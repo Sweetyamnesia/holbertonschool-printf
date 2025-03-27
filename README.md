@@ -74,6 +74,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o _printf
 ---
 
 ## 🧩 FLOWCHART
+![Flowchart de _printf](https://github.com/Sweetyamnesia/holbertonschool-printf/blob/main/Flowchart.png?raw=true)
 
 ---
 
