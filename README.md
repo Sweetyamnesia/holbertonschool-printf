@@ -1,30 +1,18 @@
-# 📘 _printf - Projet Holberton
+# 📘 # holbertonschool-printf
 
-Bienvenue dans le projet **_printf**, une réimplémentation simplifiée de la fonction `printf` standard du langage C.  
-Ce projet a été réalisé dans le cadre du programme de l'école **Holberton School** (ou ALX).
-
----
-
-## 🧠 Objectif
-
-L'objectif de ce projet est de comprendre le fonctionnement de la fonction `printf`, en mettant en œuvre une version personnalisée en C.  
-Nous utilisons les fonctions variadiques et traitons manuellement les chaînes de format.
+Bienvenue dans le projet **_printf**, réalisé dans le cadre des fondamentaux Holberton School Bordeaux.
 
 ---
 
-## 🛠️ Prototype
+## 🧠 DESCRIPTION & OBJECTIF DU PROJET
+Ce projet a pour objectif de réécrire, de manière simplifiée, la fonction printf en langage C.
 
-```c
-int _printf(const char *format, ...);
-```
+Il s'agit du premier projet collaboratif réalisé en binôme, dans le cadre de l'apprentissage des fondamentaux du programme Holberton School.
+En C, la fonction printf() permet d'afficher une sortie formatée sur la sortie standard stdout (généralement l'écran de la console). Elle fait partie de la bibliothèque standard <stdio.h> et offre une grande flexibilité pour le formatage des données à afficher.
 
----
+Dans ce projet, nous avons implémenté notre propre version nommée _printf, capable de gérer les formats de base suivants :
 
-## ✅ Fonctionnalités prises en charge
-
-Notre fonction `_printf` est capable de gérer les **spécificateurs de conversion** suivants :
-
-| Spécificateur | Description                          |
+| SPÉCIFICATEUR | DESCRIPTION                        |
 |---------------|--------------------------------------|
 | `%c`          | Affiche un caractère                 |
 | `%s`          | Affiche une chaîne de caractères     |
@@ -33,29 +21,25 @@ Notre fonction `_printf` est capable de gérer les **spécificateurs de conversi
 
 ---
 
-## ❌ Fonctionnalités non prises en charge
+## 🛠️ PROTOTYPE
 
-Les éléments suivants ne sont **pas pris en charge** dans cette version :
-
-- Flags (ex : `+`, `-`, `0`, `#`, etc.)
-- Largeur des champs (`%5d`, `%10s`, etc.)
-- Précision (`%.2f`, etc.)
-- Modificateurs de longueur (`%ld`, `%hh`, etc.)
-- Autres spécificateurs (`%u`, `%x`, `%o`, etc.)
+```c
+int _printf(const char *format, ...);
+```
 
 ---
 
-## 💻 Exemple d'utilisation
+## 💻 EXEMPLE D'UTILISATION
 
 ```c
 #include "main.h"
 
 int main(void)
 {
-    _printf("Hello, %s!\n", "world");
-    _printf("Character: %c\n", 'A');
-    _printf("Number: %d\n", 123);
-    _printf("Percent sign: %%\n");
+    _printf("Holberton, %s!\n", "school!");
+    _printf("Caractere: %c\n", 'A');
+    _printf("Nombre: %d\n", 123);
+    _printf("Signe pourcent: %%\n");
     return (0);
 }
 ```
@@ -63,15 +47,15 @@ int main(void)
 🖨️ **Sortie attendue :**
 
 ```
-Hello, world!
-Character: A
-Number: 123
-Percent sign: %
+Holberton School!
+Caractere: A
+Nombre: 123
+Signe pourcent: %
 ```
 
 ---
 
-## ⚙️ Compilation
+## ⚙️ COMPILATION
 
 Pour compiler le programme :
 
@@ -81,33 +65,23 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o _printf
 
 ---
 
-## 🗂️ Fichiers importants
+## 🗂️ FICHIERS IMPORTANTS
 
 - `main.h` : Fichier d’en-tête contenant les prototypes
-- `_printf.c` : Fonction principale qui gère le parsing
-- `print_char.c` : Gestion du `%c`
-- `print_string.c` : Gestion du `%s`
-- `print_integer.c` : Gestion des `%d` / `%i`
-- `utils.c` : Fonctions utilitaires (ex: conversion en string, compte de caractères)
+- `_printf.c` : Fonction principale
+- `fonctions.c` : Fichier contenant toutes les fonctions spécialisées qui sont responsable d'afficherun type d'argument particulier dans la fonction print.f
 
 ---
 
-## 👥 Auteurs
-
-Projet réalisé par :
-
-- [Ton Nom ici ou ton pseudo GitHub](https://github.com/ton-profil)
-- (Ajoute les autres membres de ton équipe ici)
+## 🧩 FLOWCHART
 
 ---
 
-## 🧪 Ressources utiles
+## 👥 COLLABORATEURS & AUTEURS
 
-- [`man 3 printf`](https://man7.org/linux/man-pages/man3/printf.3.html)
-- [Documentation `stdarg.h`](https://en.cppreference.com/w/c/variadic)
+[**Victoire Boutin**](https://github.com/Victoire07)
+[LinkedIn - Victoire](https://www.linkedin.com/in/victoire-boutin-207814171/)
 
----
+[**Angela Rhin**](https://github.com/Sweetyamnesia)
+[LinkedIn - Angela](https://www.linkedin.com/in/angela-rhin/)
 
-## 📝 Licence
-
-Projet à but **éducatif** uniquement — Holberton School.
